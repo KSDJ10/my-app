@@ -1,11 +1,12 @@
-
 node{
+    
+
     def mvnHome =  tool name: 'maven3', type: 'maven' 
     environment(branch='qa')
     stage('git chkout'){
         
-    git branch: 'krishna', url: 'https://github.com/KSDJ10/my-app.git'
-    echo "$branch"
+    git branch: "${params.br}", url: 'https://github.com/KSDJ10/my-app.git'
+    echo "${params.br}"
     echo "${env.WORKSPACE}"
     }
     stage('build'){
