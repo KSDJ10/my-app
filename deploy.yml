@@ -5,5 +5,5 @@
     - name: remove old container
       shell: docker rm -f tomcattest
     - name: create container
-      shell: docker run -d -p 8090:8080 --name tomcattest ksdj10/mywebapp:0.0.1
+      shell: docker run -d -p 8090:8080 --name tomcattest ksdj10/mywebapp:latest
         
