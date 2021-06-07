@@ -4,7 +4,6 @@
   tasks:
     - name: remove old container
       shell: docker rm -f tomcattest
-  tasks:
     - name: create container
       shell: docker run -d -p 8090:8080 --name tomcattest ksdj10/mywebapp:0.0.1
         
