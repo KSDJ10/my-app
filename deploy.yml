@@ -1,6 +1,7 @@
 ---
-  - hosts: webservers
-    become: True
-    tasks
-     - name: create container
-       shell: docker run -d -p 8090:8080 --name tomcattest ksdj10/mywebapp:0.0.1
+- hosts: webservers 
+  become: True
+  tasks:
+    - name: create container
+      shell: docker run -d -p 8090:8080 --name tomcattest ksdj10/mywebapp:0.0.1
+        
